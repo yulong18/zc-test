@@ -19,6 +19,6 @@ git checkout plctlab/plct-zce-0.70.0
 
 cd ..
 
-./configure --prefix="$PWD/opt-riscv-rv32-zcb" --with-arch=rv32gc_zca_zcb --with-abi=ilp32d --with-multilib-generator="rv32gc_zca_zcb-ilp32d--"
+./configure --prefix="$PWD/opt-riscv-rv32-zcb" --with-arch=rv32gc_zba_zbb_zca_zcb --with-abi=ilp32d --with-multilib-generator="rv32gc_zba_zbb_zca_zcb-ilp32d--"
 make report-gcc-newlib -j $(nproc) &&
 make report-binutils-newlib -j $(nproc)
