@@ -1,0 +1,22 @@
+echo "zcb/"
+./qemu-riscv32 -cpu rv32,g=false,c=false,x-zca=true,x-zcb=true  (your zcb elf)
+./qemu-riscv64 -cpu rv64,g=false,c=false,x-zca=true,x-zcb=true  (your zcb elf)
+
+echo "zcf/"
+./qemu-riscv32 -cpu rv32,g=false,c=false,x-zcf=true,x-zca=true (your zcf elf)
+./qemu-riscv64 -cpu rv64,g=false,c=false,x-zcf=true,x-zca=true (your zcf elf)
+
+echo "zcmb/"
+./qemu-riscv32 -cpu rv32,x-zca=true,g=false,c=false,d=false,x-zcb=true,x-zcmb=true (your zcmb elf)
+./qemu-riscv64 -cpu rv64,g=false,c=false,x-zca=true,x-zcb=true,x-zcmb=true         (your zcmb elf)
+
+echo "zcmp/"
+./qemu-riscv32 -cpu rv32,g=false,c=false,x-zca=true,x-zcmp=true  (your zcmp elf)
+./qemu-riscv64 -cpu rv64,g=false,c=false,x-zca=true,x-zcmp=true  (your zcmp elf)
+
+echo "zcmpe/"
+./qemu-riscv32 -cpu rv32,g=false,c=false,i=false,e=true,x-zca=true,x-zcmpe=true  (your zcmpe elf)
+
+echo "zcmt/"
+./qemu-riscv32 -cpu rv32,g=false,c=false,x-zca=true,x-zcb=true,x-zcmt=true (your zcmt elf)
+./qemu-riscv64 -cpu rv64,g=false,c=false,x-zca=true,x-zcb=true,x-zcmt=true (your zcmt elf)
