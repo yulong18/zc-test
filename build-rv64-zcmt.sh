@@ -15,10 +15,10 @@ git checkout corev/development
 cd ../qemu
 git remote add plctlab https://github.com/plctlab/plct-qemu.git
 git fetch plctlab
-git checkout plctlab/plct-zce-dev
+git checkout plctlab/plct-zce-0.70.0
 
 cd ..
 
-./configure --prefix="$PWD/opt-riscv-rv64-zcmt" --with-arch=rv64ima_zicsr_zcmt --with-abi=ilp64
+./configure --prefix="$PWD/opt-riscv-rv64-zcmt" --with-arch=rv64ima_zicsr_zcmt --with-abi=lp64 --with-multilib-generator="rv64ima_zicsr_zcmt-lp64--"
 make report-gcc-newlib -j $(nproc) &&
 make report-binutils-newlib -j $(nproc)
