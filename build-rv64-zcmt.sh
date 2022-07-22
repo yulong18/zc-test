@@ -19,6 +19,6 @@ git checkout plctlab/plct-zce-0.70.0
 
 cd ..
 
-./configure --prefix="$PWD/opt-riscv-rv64-zcmt" --with-arch=rv64ima_zicsr_zcmt --with-abi=lp64 --with-multilib-generator="rv64ima_zicsr_zcmt-lp64--"
+./configure --prefix="$PWD/opt-riscv-rv64-zcmt" --with-arch=rv64g_zca_zcmt --with-abi=lp64 --with-multilib-generator="rv64g_zca_zcmt-lp64--"
 make report-gcc-newlib -j $(nproc) &&
 make report-binutils-newlib -j $(nproc)
